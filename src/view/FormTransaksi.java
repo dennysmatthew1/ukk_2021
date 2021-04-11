@@ -97,7 +97,7 @@ public class FormTransaksi extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Open Sans", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("TRANSAKSI PEMBAYARAN SPP");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
 
         cari.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         cari.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -173,8 +173,8 @@ public class FormTransaksi extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Open Sans ExtraBold", 0, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(153, 153, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ahdsiuoashdio.jpg"))); // NOI18N
-        jButton2.setText("KEMBALI");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_cancel_black_18dp.png"))); // NOI18N
+        jButton2.setText("Kembali");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -298,7 +298,7 @@ public class FormTransaksi extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 11)); // NOI18N
         jButton7.setForeground(new java.awt.Color(153, 153, 255));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/002-refresh.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_refresh_black_18dp.png"))); // NOI18N
         jButton7.setText("Reset Form");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

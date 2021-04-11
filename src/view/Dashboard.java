@@ -97,6 +97,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         t_Level = new javax.swing.JLabel();
         tNama_user = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -113,6 +114,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -128,6 +130,8 @@ public class Dashboard extends javax.swing.JFrame {
         smTambah_trans = new javax.swing.JMenuItem();
         mnLaporan = new javax.swing.JMenu();
         smGenerate_laporan = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         mnAbout = new javax.swing.JMenu();
 
         jLabel1.setText("jLabel1");
@@ -152,7 +156,7 @@ public class Dashboard extends javax.swing.JFrame {
         tableTransaksi.setEnabled(false);
         jScrollPane1.setViewportView(tableTransaksi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 920, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 920, 320));
 
         cariTransaksi.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -168,22 +172,27 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        t_Level.setFont(new java.awt.Font("Open Sans", 1, 24)); // NOI18N
+        t_Level.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
         t_Level.setForeground(new java.awt.Color(255, 255, 255));
         t_Level.setText("level");
-        jPanel2.add(t_Level, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 260, 30));
+        jPanel2.add(t_Level, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 260, 20));
 
-        tNama_user.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+        tNama_user.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         tNama_user.setForeground(new java.awt.Color(255, 255, 255));
         tNama_user.setText("Nama User");
-        jPanel2.add(tNama_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 250, -1));
+        jPanel2.add(tNama_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 250, -1));
+
+        jLabel10.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Selamat Datang!");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 290, 80));
 
         jLabel5.setFont(new java.awt.Font("Open Sans", 1, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("SPP PAYMENT APS");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, 60));
+        jLabel5.setText("Aplikasi Pembayaran SPP");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, 60));
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 255));
 
@@ -311,27 +320,30 @@ public class Dashboard extends javax.swing.JFrame {
                 btnTransaksiActionPerformed(evt);
             }
         });
-        getContentPane().add(btnTransaksi, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 30, 210, 60));
+        getContentPane().add(btnTransaksi, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 570, 210, 60));
 
         jLabel14.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("SMK TADIKA PERTIWI");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("DATA ANGKATAN");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
+        jLabel2.setText("DATA SPP Per ANGKATAN");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cari Transaksi");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, -1, -1));
 
+        jLabel7.setText("jLabel7");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
+
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img1/4.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/background/pexels-jakub-novacek-924824.jpg"))); // NOI18N
         jLabel4.setText("z");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 680));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 720));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -341,10 +353,10 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuBar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        mnAkun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/people-3.png"))); // NOI18N
+        mnAkun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_support_agent_black_18dp.png"))); // NOI18N
         mnAkun.setText("Akun");
 
-        smInfo_akun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/briefing.png"))); // NOI18N
+        smInfo_akun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_event_note_black_18dp.png"))); // NOI18N
         smInfo_akun.setText("Info Akun");
         smInfo_akun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -353,7 +365,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         mnAkun.add(smInfo_akun);
 
-        smLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/out.png"))); // NOI18N
+        smLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_logout_black_18dp.png"))); // NOI18N
         smLogout.setText("Logout");
         smLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -364,10 +376,10 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(mnAkun);
 
-        mnDataMaster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/people-5.png"))); // NOI18N
-        mnDataMaster.setText("Data Master");
+        mnDataMaster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_menu_black_18dp.png"))); // NOI18N
+        mnDataMaster.setText("Menu Data");
 
-        smData_siswa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/social_1.png"))); // NOI18N
+        smData_siswa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_accessibility_new_black_18dp.png"))); // NOI18N
         smData_siswa.setText("Data Siswa");
         smData_siswa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -376,7 +388,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         mnDataMaster.add(smData_siswa);
 
-        smData_petugas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/taxi-driver.png"))); // NOI18N
+        smData_petugas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_admin_panel_settings_black_18dp.png"))); // NOI18N
         smData_petugas.setText("Data Petugas");
         smData_petugas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -385,7 +397,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         mnDataMaster.add(smData_petugas);
 
-        smData_kelas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lk.png"))); // NOI18N
+        smData_kelas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_class_black_18dp.png"))); // NOI18N
         smData_kelas.setText("Data Kelas");
         smData_kelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -394,7 +406,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         mnDataMaster.add(smData_kelas);
 
-        smData_spp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/square.png"))); // NOI18N
+        smData_spp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_view_list_black_18dp.png"))); // NOI18N
         smData_spp.setText("Data SPP");
         smData_spp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -405,10 +417,10 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(mnDataMaster);
 
-        mnPembayaran.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BT_TRANSAKSIpng.png"))); // NOI18N
+        mnPembayaran.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_payment_black_18dp.png"))); // NOI18N
         mnPembayaran.setText("Pembayaran");
 
-        smTambah_trans.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/013-plus.png"))); // NOI18N
+        smTambah_trans.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_library_add_black_18dp.png"))); // NOI18N
         smTambah_trans.setText("Tambah Transaksi");
         smTambah_trans.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -419,11 +431,11 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(mnPembayaran);
 
-        mnLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/inv.png"))); // NOI18N
+        mnLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_task_black_18dp.png"))); // NOI18N
         mnLaporan.setText("Laporan");
 
-        smGenerate_laporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/briefing.png"))); // NOI18N
-        smGenerate_laporan.setText("Generate Laporan");
+        smGenerate_laporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_local_printshop_black_18dp.png"))); // NOI18N
+        smGenerate_laporan.setText("Laporan Pembayaran");
         smGenerate_laporan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 smGenerate_laporanActionPerformed(evt);
@@ -431,9 +443,27 @@ public class Dashboard extends javax.swing.JFrame {
         });
         mnLaporan.add(smGenerate_laporan);
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_local_printshop_black_18dp.png"))); // NOI18N
+        jMenuItem1.setText("Laporan Siswa");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        mnLaporan.add(jMenuItem1);
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_local_printshop_black_18dp.png"))); // NOI18N
+        jMenuItem2.setText("Laporan Petugas");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        mnLaporan.add(jMenuItem2);
+
         jMenuBar1.add(mnLaporan);
 
-        mnAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/image49.png"))); // NOI18N
+        mnAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icon/baseline_info_black_18dp.png"))); // NOI18N
         mnAbout.setText("About");
         mnAbout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -504,7 +534,7 @@ public class Dashboard extends javax.swing.JFrame {
             try {
                 Map<String, Object> parameter = new HashMap<String, Object>();
                 
-                File rpt = new File("src/laporan/Lap_Trans.jrxml");
+                File rpt = new File("src/laporan/laporantransaksi.jrxml");
                 JasperDesign jasDesign = JRXmlLoader.load(rpt);
                 parameter.clear();
                 JasperReport jasReport = JasperCompileManager.compileReport(jasDesign);
@@ -527,6 +557,50 @@ public class Dashboard extends javax.swing.JFrame {
     private void smInfo_akunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smInfo_akunActionPerformed
         new InfoAkun().setVisible(true);
     }//GEN-LAST:event_smInfo_akunActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+       try {
+            KoneksiDB.getConnection();
+            try {
+                Map<String, Object> parameter = new HashMap<String, Object>();
+                
+                File rpt = new File("src/laporan/laporanpetugas.jrxml");
+                JasperDesign jasDesign = JRXmlLoader.load(rpt);
+                parameter.clear();
+                JasperReport jasReport = JasperCompileManager.compileReport(jasDesign);
+                JasperPrint jasPrint = net.sf.jasperreports.engine.JasperFillManager.fillReport(jasReport, 
+                        parameter, KoneksiDB.getConnection());
+                JasperViewer.viewReport(jasPrint, false);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Laporan tidak ditemukan" + e);
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        try {
+            KoneksiDB.getConnection();
+            try {
+                Map<String, Object> parameter = new HashMap<String, Object>();
+                
+                File rpt = new File("src/laporan/laporansiswa.jrxml");
+                JasperDesign jasDesign = JRXmlLoader.load(rpt);
+                parameter.clear();
+                JasperReport jasReport = JasperCompileManager.compileReport(jasDesign);
+                JasperPrint jasPrint = net.sf.jasperreports.engine.JasperFillManager.fillReport(jasReport, 
+                        parameter, KoneksiDB.getConnection());
+                JasperViewer.viewReport(jasPrint, false);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Laporan tidak ditemukan" + e);
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -651,6 +725,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnTransaksi;
     private javax.swing.JTextField cariTransaksi;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
@@ -658,9 +733,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

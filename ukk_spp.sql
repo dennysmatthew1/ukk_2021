@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Apr 2020 pada 04.41
--- Versi server: 10.1.34-MariaDB
--- Versi PHP: 7.2.7
+-- Generation Time: Apr 07, 2021 at 06:19 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelas`
+-- Table structure for table `kelas`
 --
 
 CREATE TABLE `kelas` (
@@ -35,19 +35,18 @@ CREATE TABLE `kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kelas`
+-- Dumping data for table `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `kompetensi_keahlian`) VALUES
-(8, 'X RPL ', 'RPL'),
-(9, 'XI RPL', 'RPL'),
-(10, 'XII RPL ', 'RPL'),
-(11, 'XI MULTIMEDIA', 'MULTIMEDIA');
+(13, 'X', 'RPL'),
+(14, 'XI', 'RPL'),
+(15, 'XII', 'RPL');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pembayaran`
+-- Table structure for table `pembayaran`
 --
 
 CREATE TABLE `pembayaran` (
@@ -62,21 +61,18 @@ CREATE TABLE `pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pembayaran`
+-- Dumping data for table `pembayaran`
 --
 
 INSERT INTO `pembayaran` (`id_pembayaran`, `id_petugas`, `nisn`, `tgl_bayar`, `bulan_dibayar`, `tahun_dibayar`, `id_spp`, `jumlah_bayar`) VALUES
-('TRS0001', 1, '0021212313', '2020-02-28', 'januari', '2019', 3, 200000),
-('TRS0002', 1, '002323123', '2020-02-28', 'januari', '2018', 2, 170000),
-('TRS0003', 1, '1234567890', '2020-02-28', 'januari', '2018', 2, 170000),
-('TRS0004', 8, '0021212313', '2020-02-28', 'februari', '2019', 3, 200000),
-('TRS0005', 1, '002323123', '2020-04-08', 'februari', '2018', 2, 170000),
-('TRS0006', 1, '0021212313', '2020-04-10', 'maret', '2019', 3, 200000);
+('TRS0001', 1, '0034552820', '2021-04-07', 'januari', '2021', 7, 280000),
+('TRS0002', 1, '0034558989', '2021-04-07', 'januari', '2021', 7, 280000),
+('TRS0003', 1, '0034558989', '2021-04-07', 'februari', '2021', 7, 280000);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `petugas`
+-- Table structure for table `petugas`
 --
 
 CREATE TABLE `petugas` (
@@ -88,18 +84,16 @@ CREATE TABLE `petugas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `petugas`
+-- Dumping data for table `petugas`
 --
 
 INSERT INTO `petugas` (`id_petugas`, `username`, `password`, `nama_petugas`, `level`) VALUES
-(1, 'admin', '123', 'Gigabit', 'admin'),
-(2, 'petugas', '123', 'Yustira', 'petugas'),
-(8, 'qwer', 'qwer', 'Denim', 'petugas');
+(1, 'admin', 'toor', 'Dennys Matthew', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `siswa`
+-- Table structure for table `siswa`
 --
 
 CREATE TABLE `siswa` (
@@ -113,19 +107,17 @@ CREATE TABLE `siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `siswa`
+-- Dumping data for table `siswa`
 --
 
 INSERT INTO `siswa` (`nisn`, `nis`, `nama`, `id_kelas`, `alamat`, `no_telp`, `id_spp`) VALUES
-('0021212313', '1920123', 'Sapphire', 8, 'Paradise Resort', '083132895476', 3),
-('002323123', '1819238', 'Ruby', 9, 'Ruins', '087645897656', 2),
-('0063241315', '17181017', 'Pearl', 10, 'Severni', '087623341257', 1),
-('1234567890', '12345678', 'Garnet', 9, 'Gatka', '08000000', 2);
+('0034552820', '0001', 'Dennys', 15, 'Meruyung', '0', 7),
+('0034558989', '0002', 'Stephanus Avillio', 15, 'Meruyung', '01', 7);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `spp`
+-- Table structure for table `spp`
 --
 
 CREATE TABLE `spp` (
@@ -135,27 +127,24 @@ CREATE TABLE `spp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `spp`
+-- Dumping data for table `spp`
 --
 
 INSERT INTO `spp` (`id_spp`, `tahun`, `nominal`) VALUES
-(1, 2017, 150000),
-(2, 2018, 170000),
-(3, 2019, 200000),
-(5, 2020, 250000);
+(7, 2021, 280000);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `kelas`
+-- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id_kelas`);
 
 --
--- Indeks untuk tabel `pembayaran`
+-- Indexes for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`id_pembayaran`),
@@ -164,13 +153,13 @@ ALTER TABLE `pembayaran`
   ADD KEY `nisn` (`nisn`);
 
 --
--- Indeks untuk tabel `petugas`
+-- Indexes for table `petugas`
 --
 ALTER TABLE `petugas`
   ADD PRIMARY KEY (`id_petugas`);
 
 --
--- Indeks untuk tabel `siswa`
+-- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`nisn`),
@@ -178,39 +167,39 @@ ALTER TABLE `siswa`
   ADD KEY `id_kelas` (`id_kelas`);
 
 --
--- Indeks untuk tabel `spp`
+-- Indexes for table `spp`
 --
 ALTER TABLE `spp`
   ADD PRIMARY KEY (`id_spp`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `kelas`
+-- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT untuk tabel `petugas`
+-- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
   MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `spp`
+-- AUTO_INCREMENT for table `spp`
 --
 ALTER TABLE `spp`
-  MODIFY `id_spp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_spp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `pembayaran`
+-- Constraints for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD CONSTRAINT `pembayaran_ibfk_2` FOREIGN KEY (`nisn`) REFERENCES `siswa` (`nisn`),
@@ -218,7 +207,7 @@ ALTER TABLE `pembayaran`
   ADD CONSTRAINT `pembayaran_ibfk_5` FOREIGN KEY (`id_petugas`) REFERENCES `petugas` (`id_petugas`);
 
 --
--- Ketidakleluasaan untuk tabel `siswa`
+-- Constraints for table `siswa`
 --
 ALTER TABLE `siswa`
   ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`id_spp`) REFERENCES `spp` (`id_spp`),

@@ -89,7 +89,7 @@ public class CRUD_Spp extends javax.swing.JFrame {
         BtnRefresh1.setBackground(new java.awt.Color(102, 255, 102));
         BtnRefresh1.setFont(new java.awt.Font("Open Sans", 1, 14)); // NOI18N
         BtnRefresh1.setForeground(new java.awt.Color(153, 153, 255));
-        BtnRefresh1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/001-refresh-1.png"))); // NOI18N
+        BtnRefresh1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_refresh_black_18dp.png"))); // NOI18N
         BtnRefresh1.setText("Refresh Table");
         BtnRefresh1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +101,7 @@ public class CRUD_Spp extends javax.swing.JFrame {
         btnBack1.setBackground(new java.awt.Color(255, 255, 255));
         btnBack1.setFont(new java.awt.Font("Open Sans", 1, 14)); // NOI18N
         btnBack1.setForeground(new java.awt.Color(153, 153, 255));
-        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ahdsiuoashdio.jpg"))); // NOI18N
+        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_cancel_black_18dp.png"))); // NOI18N
         btnBack1.setText("KEMBALI");
         btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,8 +171,8 @@ public class CRUD_Spp extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Open Sans", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("KELOLA DATA SPP");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, -1));
+        jLabel4.setText("Data SPP");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, -1));
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img1/3.jpg"))); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 760));

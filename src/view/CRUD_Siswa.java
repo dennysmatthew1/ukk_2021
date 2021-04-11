@@ -109,7 +109,7 @@ public class CRUD_Siswa extends javax.swing.JFrame {
         BtnRefresh.setBackground(new java.awt.Color(102, 255, 102));
         BtnRefresh.setFont(new java.awt.Font("Open Sans", 1, 14)); // NOI18N
         BtnRefresh.setForeground(new java.awt.Color(153, 153, 255));
-        BtnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/001-refresh-1.png"))); // NOI18N
+        BtnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_refresh_black_18dp.png"))); // NOI18N
         BtnRefresh.setText("Refresh Table");
         BtnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +121,7 @@ public class CRUD_Siswa extends javax.swing.JFrame {
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setFont(new java.awt.Font("Open Sans", 1, 14)); // NOI18N
         btnBack.setForeground(new java.awt.Color(153, 153, 255));
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ahdsiuoashdio.jpg"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/baseline_cancel_black_18dp.png"))); // NOI18N
         btnBack.setText("KEMBALI");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,7 +240,7 @@ public class CRUD_Siswa extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Open Sans", 1, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("KELOLA DATA SISWA");
+        jLabel3.setText("Data Siswa");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, -1));
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img1/3.jpg"))); // NOI18N

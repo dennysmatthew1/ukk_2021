@@ -17,7 +17,7 @@ public class KoneksiDB {
    public static Connection getConnection() {
        
      try {
-         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/UKK_SPP","root","");         
+         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ukk_spp","root","");         
      }catch (Exception e) {
          JOptionPane.showMessageDialog(null, "ERROR : Koneksi Gagal!");
          System.exit(0);
